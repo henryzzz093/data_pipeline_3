@@ -4,6 +4,6 @@ faker
 jsonlines
 pandas
 paramiko
-pyscopg2
+psycopg2
 pyyaml
 requests
