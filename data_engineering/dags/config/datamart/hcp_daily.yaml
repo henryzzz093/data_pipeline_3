@@ -1,0 +1,13 @@
+- dag_name: daily_prescriptions
+  sink_aux_kwargs:
+    schema: hcp_daily
+    table: daily_prescriptions
+  tags:
+    - triggered
+
+- dag_name: daily_diagnosis
+  sink_aux_kwargs: 
+    schema: hcp_daily
+    table: daily_diagnosis
+  tags:
+    - triggered

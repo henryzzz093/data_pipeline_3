@@ -4,6 +4,8 @@ service:
   app:
     build: .
     volumes: 
+      - ../${PROJECT}/plugins:/app/plugins
+      - ../dev/:/app/dev
 
 
 

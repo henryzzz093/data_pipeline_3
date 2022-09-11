@@ -1,0 +1,15 @@
+- dag_name: npi_daily
+  start_date: '2022-01-01'
+  schedule_interval: "@daily"
+  catchup: True
+  trigger_dags:
+    - datamart.hcp_daily.daily_prescriptions
+    - datamart.hcp_daily.daily_diagnosis
+  source_aux_kwargs: 
+    max_row_count: 1000
+  sink_aux_kwargs:
+    schema: fake_npi
+    table: npi_daily
+    load_type: incremental_load
+  tags:
+    - daily
